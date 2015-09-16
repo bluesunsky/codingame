@@ -1,1 +1,1 @@
-print(' '.join([' '.join(['0'if p[0]=='1'else'00','0'*len(p)])for p in((''.join(["%7s"%bin(ord(c))[2:]for c in input()]).replace(' ','0')).replace('10','1|0').replace('01','0|1')).split('|')]))
+print(*[' '.join(['0'*(1+(p<'1')),'0'*len(p)])for p in(''.join([bin(ord(c))[2:].zfill(7)for c in input()])).replace('10','1|0').replace('01','0|1').split('|')])

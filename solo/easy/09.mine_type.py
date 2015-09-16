@@ -1,5 +1,6 @@
-N,Q,convert=int(input()),int(input()),lambda ext,mt:(ext.upper(),mt)
-exts=dict([convert(*input().split()) for i in range(N)])
-for i in range(Q):
-    try: print(exts.get((input().rsplit('.',1))[1].upper(),'UNKNOWN'))
-    except IndexError: print('UNKNOWN')
+N,Q=int(input()),int(input())
+E={}
+for i in[0]*N:a=input().split();E[a[0].upper()]=a[1]
+for i in[0]*Q:
+    try:print(E[(input().rsplit('.',1))[1].upper()])
+    except:print('UNKNOWN')

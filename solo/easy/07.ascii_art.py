@@ -1,9 +1,8 @@
-L,H,T = int(input()),int(input()),input().upper()
-ROWS=[input() for i in range(H)]
-indexes='ABCDEFGHIJKLMNOPQRSTUVWXYZ?'
-RES=['']*H
+L,H,T=int(input()),int(input()),input().upper()
+R=['']*H
+D=list(map(input,R))
 for t in T:
-    try:    pos=indexes.index(t)
-    except: pos=len(indexes)-1
-    for r in range(H): RES[r]+=ROWS[r][pos*L:(pos+1)*L]
-print('\n'.join(RES))
+    p=ord(t)
+    if not 64<p<91:p=91
+    for r in range(H):R[r]+=D[r][(p-65)*L:(p-64)*L]
+print(*R,sep='\n')

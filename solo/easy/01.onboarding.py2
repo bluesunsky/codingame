@@ -1,0 +1,1 @@
+while 1:e,d,E,D=map(raw_input,['']*4);print d<D and e or E

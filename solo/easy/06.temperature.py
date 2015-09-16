@@ -1,1 +1,1 @@
-print(-sorted([(abs(int(x)),-int(x))for x in input().split(' ')])[0][1]if int(input())else 0)
+print(0 if input()<'1' else -sorted([(abs(int(x)),-int(x))for x in input().split()])[0][1])

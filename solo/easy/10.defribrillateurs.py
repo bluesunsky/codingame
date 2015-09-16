@@ -1,6 +1,5 @@
-import math, csv
-LON,LAT,CSV,liste=float(input().replace(',','.')),float(input().replace(',','.')),[input() for i in range(int(input()))],[]
-for line in csv.reader(CSV,delimiter=';'):
-    lon,lat=float(line[-2].replace(',','.')),float(line[-1].replace(',','.'))
-    liste.append((((LON-lon)*math.cos((lat-LAT)/2.))**2+(LAT-lat)**2,line[1]))
-print(sorted(liste)[0][1])
+import math,csv
+I=input
+F=lambda x:float(x.replace(',','.'))
+A,B,C=F(I()),F(I()),[I()for i in[0]*int(I())]
+print(sorted([(((A-F(r[-2]))*math.cos((F(r[-1])+B)/2))**2+(B-F(r[-1]))**2,r[1])for r in csv.reader(C,delimiter=';')])[0][1])

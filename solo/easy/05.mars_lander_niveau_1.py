@@ -1,12 +1,3 @@
-LAND=[ list(map(int,input().split())) for i in range(int(input()))]
-X,Y=zip(*LAND)
-x,y,hs,vs,f,r,p=map(int,input().split())
-for i,xx in enumerate(X):
-    if xx>x: break
-SOL=Y[i]
-while 1:
-    R,P=0,0
-    dist=y-SOL
-    if vs!=0 and abs(dist/vs)<48:P=4
-    print('%d %d'%(R,P))
-    x, y, hs, vs, f, r, p =map(int,input().split())
+my=0
+for i in range(int(input())):my=min(my,int(input().split()[1]))
+while 1:print(0,int(input().split()[3])<-39 and 4 or 0)

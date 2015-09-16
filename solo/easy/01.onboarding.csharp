@@ -1,0 +1,12 @@
+using System;
+class Player{
+    static void Main(string[] args){
+        while (true){
+            string e = Console.ReadLine();
+            int d = int.Parse(Console.ReadLine());
+            string E = Console.ReadLine();
+            int D = int.Parse(Console.ReadLine());
+            Console.WriteLine(d<D?e:E);
+        }
+    }
+}

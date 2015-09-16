@@ -1,0 +1,9 @@
+open System
+while true do
+    let e = Console.In.ReadLine()
+    let d = int(Console.In.ReadLine())
+    let E = Console.In.ReadLine()
+    let D = int(Console.In.ReadLine())
+    if d<D
+    then printfn "%s" e
+    else printfn "%s" E
